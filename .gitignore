@@ -17,6 +17,7 @@ package-lock.json
 *.sublime-*
 *.rar
 *.zip
+*.psd
 .idea
 .publish
 ex_files
