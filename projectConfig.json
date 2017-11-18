@@ -40,7 +40,8 @@
     "about": [],
     "portfolio": [],
     "blog": [],
-    "skills": []
+    "skills": [],
+    "timeline": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
