@@ -38,7 +38,8 @@
     "embed-responsive": [],
     "hero": [],
     "about": [],
-    "portfolio": []
+    "portfolio": [],
+    "blog": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
