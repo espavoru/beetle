@@ -39,7 +39,8 @@
     "hero": [],
     "about": [],
     "portfolio": [],
-    "blog": []
+    "blog": [],
+    "skills": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
