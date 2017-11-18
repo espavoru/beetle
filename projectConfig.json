@@ -37,7 +37,8 @@
     "tabs": [],
     "embed-responsive": [],
     "hero": [],
-    "about": []
+    "about": [],
+    "portfolio": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
