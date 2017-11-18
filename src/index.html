@@ -1,41 +1,82 @@
 <!DOCTYPE html>
 <html class="no-js  page" lang="ru">
 
-<head>
-  <meta charset="utf-8">
-  <title>Beetle</title>
-  <meta name="description" content="">
-  @@include('_include/page_head.html')
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Beetle</title>
+    <meta name="description" content="">
+    @@include('_include/page_head.html')
+  </head>
 
-<body>
+  <body>
 
-  <div class="page__inner">
+    <div class="page__inner">
 
-    <div class="page__content">
+      <div class="page__content">
 
-      @@include('blocks/page-header/page-header.html')
+        @@include('blocks/page-header/page-header.html')
 
-      <main role="main">
+        <main role="main">
 
-        <div id="#hero" class="hero">
-          <div class="hero__wrapper">
-            <h1 class="hero__title">Designer & Maker</h1>
-            <h2 class="hero__subtitle">Building new products at Spotify NYC. Mail App</h2>
-            <a href="#" class="btn hero__btn">View more</a>
+          <div id="#hero" class="hero">
+            <div class="hero__wrapper">
+              <h1 class="hero__title">Designer & Maker</h1>
+              <h2 class="hero__subtitle">Building new products at Spotify NYC. Mail App</h2>
+              <a href="#" class="btn hero__btn">View more</a>
+            </div>
           </div>
-        </div>
 
-      </main>
+          <div class="about" id="about">
+            <div class="about__wrapper">
+              <div class="about__slider owl-carousel" id="owl-carousel-about">
+                <div class="about__slide slide-about">
+                  <div class="slide-about__row">
+                    <div class="slide-about__figures">
+                      <div class="slide-about__element">UI</div>
+                      <div class="slide-about__element">UX</div>
+                    </div>
+                    <div class="slide-about__content">
+                      <h3 class="slide-about__heading">I create simple interfaces for humans and enjoy pixel-perfection.</h3>
+                      <p class="slide-about__text">I’m an experienced and passionate user interface designer with interaction design background.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="about__slide slide-about">
+                  <div class="slide-about__row">
+                    <div class="slide-about__figures">
+                      <div class="slide-about__element">Logo design</div>
+                    </div>
+                    <div class="slide-about__content">
+                      <h3 class="slide-about__heading">Mauris eget vulputate felis. Phasellus sit amet leo sed tellus vulputate</h3>
+                      <p class="slide-about__text">Donec viverra interdum turpis, a auctor nunc aliquam ac. Phasellus iaculis ex in justo eleifend volutpat. Vivamus cursus ex metus, a mollis massa sodales id.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="about__slide slide-about">
+                  <div class="slide-about__row">
+                    <div class="slide-about__figures">
+                      <div class="slide-about__element">SEO</div>
+                    </div>
+                    <div class="slide-about__content">
+                      <h3 class="slide-about__heading">Voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos</h3>
+                      <p class="slide-about__text">Etiam maximus leo metus, non vestibulum mi aliquet ultricies. Sed turpis turpis, imperdiet at blandit sed, auctor eget diam. Aenean ornare orci sed orci volutpat facilisis.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </main>
+
+      </div>
+
+      <div class="page__footer-wrapper">
+        @@include('blocks/page-footer/page-footer.html')
+      </div>
 
     </div>
 
-    <div class="page__footer-wrapper">
-      @@include('blocks/page-footer/page-footer.html')
-    </div>
-
-  </div>
-
-  @@include('_include/page_bottom.html')
-</body>
+    @@include('_include/page_bottom.html')
+  </body>
 </html>

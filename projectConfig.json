@@ -36,7 +36,8 @@
     "close": [],
     "tabs": [],
     "embed-responsive": [],
-    "hero": []
+    "hero": [],
+    "about": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
