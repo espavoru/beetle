@@ -41,7 +41,8 @@
     "portfolio": [],
     "blog": [],
     "skills": [],
-    "timeline": []
+    "timeline": [],
+    "slogan": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
