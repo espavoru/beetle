@@ -42,7 +42,9 @@
     "blog": [],
     "skills": [],
     "timeline": [],
-    "slogan": []
+    "slogan": [],
+    "contact": [],
+    "block-title": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
