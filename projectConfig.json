@@ -44,7 +44,8 @@
     "timeline": [],
     "slogan": [],
     "contact": [],
-    "block-title": []
+    "block-title": [],
+    "map": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
