@@ -9,7 +9,7 @@ $toggler-part-bg-color:       #000 !default;
 
   $block-name:                &; // #{$block-name}__element
 
-  position: relative;
+  position: absolute;
   z-index: 1;
   display: flex;
   align-items: center;

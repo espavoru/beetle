@@ -5,4 +5,44 @@
 .page-header {
 
   $block-name:                &; // #{$block-name}__element
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  width: 100%;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  animation-duration: 0s;
+  transition: background-color 1s;
+
+  @include lg-block() {
+    background-color: transparent;
+    animation-duration: 1s;
+  }
+
+  &__default {
+  }
+
+  &__fixed {
+    background-color: rgba(0, 0, 0, 0.9);
+
+    @include lg-block() {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .main-nav {
+      @include lg-block() {
+        padding-top: 6px;
+      }
+    }
+  }
+
+  &__wrapper {
+
+    @include lg-block() {
+      @include wrapper();
+    }
+  }
 }

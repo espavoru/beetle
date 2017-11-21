@@ -24,14 +24,6 @@ $transition-time:             0.3s !default;
   position: relative;
   z-index: 10;
 
-  width: 100%;
-
-  color: #fff;
-
-  @include lg-block() {
-    padding-top: 46px;
-  }
-
   // первый уровень
   &__list {
     margin: 0;
@@ -59,54 +51,16 @@ $transition-time:             0.3s !default;
     @media (min-width: $menu-desktop-width) {
       display: flex;
       flex-wrap: wrap;
-      float: right;
-
-      &--lvl-2,
-      &--lvl-3 {
-        justify-content: center;
-        flex-direction: column;
-        padding: 10px 0;
-
-        background-color: $white;
-        border-radius: 5px;
-      }
     }
   }
 
   &__item {
     position: relative;
 
-    @include lg-block() {
-      margin-left: 17px;
-
-      &:last-child #{$block-name}__link:not(#{$block-name}__link--lvl-2):not(#{$block-name}__link--lvl-3) {
-        margin-right: -0.7em;
-      }
-    }
-
-    &--lvl-2 {
-
-      @include lg-block() {
-        margin: 0;
-      }
-    }
-
     &--active {
 
-      &:after {
-        content: '';
-        position: absolute;
-        left: 0.7em;
-        right: 0.7em;
-        display: block;
-
-        height: 3px;
-
-        background-color: #fff;
-      }
-
       & > #{$block-name}__link {
-        color: $white;
+        color: #000;
       }
     }
   }
@@ -114,44 +68,19 @@ $transition-time:             0.3s !default;
   &__link {
     display: block;
     padding: 0.5em;
-
-    line-height: 1.714em;
     text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: $white;
-
-    border-radius: 5px;
-
-    @include lg-block() {
-      padding: 0.7em;
-    }
-
+    background-color: #fff;
 
     &:hover,
     &:focus {
       text-decoration: none;
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: $gray-lightest;
     }
 
     &--lvl-2 {
 
       @media (max-width: ($menu-desktop-width - 1)) {
         padding-left: 1.2em;
-      }
-
-      @include lg-block() {
-        margin: 0;
-        padding-left: 1.65em;
-        padding-right: 1.65em;
-
-        font-size: px-to-em(12);
-        font-weight: 400;
-        text-align: center;
-        color: $text-color;
-
-        white-space: nowrap;
-        border-radius: 0;
       }
     }
 
@@ -170,10 +99,8 @@ $transition-time:             0.3s !default;
       @media (min-width: $menu-desktop-width) {
         position: absolute;
         top: 100%;
-        left: 50%;
+        left: 0;
         z-index: 1;
-        transform: translateX(-50%);
-
         opacity: 0;
         height: 0;
         overflow: hidden;
@@ -219,9 +146,7 @@ $transition-time:             0.3s !default;
   // переключатель
 
   &__toggler {
-    right: 10px;
     display: inline-block;
-    margin-top: 10px;
     padding: 0;
     background: none;
     border: none;
@@ -232,22 +157,6 @@ $transition-time:             0.3s !default;
 
     @media (min-width: $menu-desktop-width) {
       display: none;
-    }
-  }
-
-  &__logo {
-    display: block;
-    font-size: 2em;
-    line-height: 2em;
-    font-weight: 700;
-    text-align: center;
-    text-decoration: none;
-    color: $white;
-
-    @include lg-block() {
-      display: inline-block;
-      line-height: 1.75em;
-
     }
   }
 }
