@@ -32,6 +32,13 @@
       background-color: rgba(0, 0, 0, 0.5);
     }
 
+    @include xxl-block() {
+      left: 50%;
+      
+      max-width: 1800px;
+      margin-left: -900px;
+    }
+
     .main-nav {
       @include lg-block() {
         padding-top: 6px;

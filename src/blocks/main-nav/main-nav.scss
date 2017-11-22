@@ -94,19 +94,26 @@ $transition-time:             0.3s !default;
     &--active {
 
       &:after {
-        content: '';
-        position: absolute;
-        left: 0.7em;
-        right: 0.7em;
-        display: block;
 
-        height: 3px;
+        @include lg-block() {
+          content: '';
+          position: absolute;
+          left: 0.7em;
+          right: 0.7em;
+          display: block;
 
-        background-color: #fff;
+          height: 3px;
+
+          background-color: #fff;
+        }
       }
 
       & > #{$block-name}__link {
-        color: $white;
+        color: $color-main;
+
+        @include lg-block() {
+          color: $white;
+        }
       }
     }
   }

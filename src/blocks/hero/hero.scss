@@ -6,8 +6,73 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  position: relative;
   min-height: 100vh;
-  padding-top: 1px;
+  padding-top: 30vh;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+
   background: #333333 url('../img/hero-bg.jpg') no-repeat center;
   background-size: cover;
+
+  &:before {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  &__wrapper {
+    position: relative;
+    @include wrapper();
+  }
+
+  &__title {
+    margin-bottom: 0;
+
+    font-size: px-to-em(45);
+    line-height: 1.3em;
+    font-weight: 700;
+
+    @include md-block() {
+      font-size: px-to-em(60);
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0;
+
+    font-size: px-to-em(18);
+    font-weight: 400;
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 50px;
+
+    display: inline-block;
+    margin-left: -27px;
+    padding: 5px;
+    width: 55px;
+    height: 55px;
+
+    font-size: 0;
+
+    border: 2px solid $white;
+    border-radius: 50%;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      margin-top: 10px;
+      @include sprite($hero-icon-arrow-down);
+    }
+  }
 }

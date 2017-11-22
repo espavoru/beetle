@@ -42,9 +42,14 @@
 }
 
 body {
-  background-color: #fff;
-  margin: 0;
+  max-width: 1800px;
   min-height: 100%;
+  margin: 0;
+  background-color: #fff;
+
+  @include xl-block() {
+    margin: 0 auto;
+  }
 }
 
 [tabindex='-1']:focus {
