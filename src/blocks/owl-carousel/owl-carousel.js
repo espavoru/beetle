@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
   $("#owl-carousel-about").owlCarousel({
-    items: 3,
+    items: 1,
     nav: true,
     loop: true,
     center: true,
@@ -13,25 +13,25 @@ $(document).ready(function () {
         center: true,
       },
       480: {
-        items: 3,
+        items: 1,
       },
       768: {
-        items: 3,
+        items: 1,
       },
       992: {
-        items: 3,
+        items: 1,
       },
       1200: {
-        items: 3,
+        items: 1,
       },
       1800: {
-        items: 3,
+        items: 1,
       }
     }
   });
 
   $("#owl-carousel-slogan").owlCarousel({
-    items: 3,
+    items: 1,
     nav: true,
     loop: true,
     center: true,
@@ -43,19 +43,19 @@ $(document).ready(function () {
         center: true,
       },
       480: {
-        items: 3,
+        items: 1,
       },
       768: {
-        items: 3,
+        items: 1,
       },
       992: {
-        items: 3,
+        items: 1,
       },
       1200: {
-        items: 3,
+        items: 1,
       },
       1800: {
-        items: 3,
+        items: 1,
       }
     }
   });

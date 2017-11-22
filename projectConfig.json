@@ -1,6 +1,7 @@
 {
   "blocks": {
     "animate.css": [],
+    "smart-grid": [],
     "page": [],
     "is-mobile": [],
     "typo": [],
@@ -53,8 +54,7 @@
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "./src/scss/functions.scss",
-    "../../node_modules/owl.carousel/dist/assets/owl.carousel.css",
-    "../../node_modules/smart-grid/scss/smart-grid.scss"
+    "../../node_modules/owl.carousel/dist/assets/owl.carousel.css"
   ],
   "addCssAfter": [
     "./src/scss/print.scss"

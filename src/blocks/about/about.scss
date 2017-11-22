@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока about, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока about, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
@@ -6,4 +6,124 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  margin-top: -15px;
+  padding-top: px-to-em(100);
+  padding-bottom: px-to-em(100);
+  background-color: #f4f4f4;
+
+  &__wrapper {
+    @include wrapper();
+  }
+
+  .slide-about {
+
+    &__row {
+      @include row-flex();
+    }
+
+    &__figures {
+      @include col();
+      @include size(16);
+      @include size-sm(12);
+      @include shift-sm(2);
+      @include size-lg(6);
+      @include shift-lg(0);
+
+      text-align: center;
+    }
+
+    &__content {
+      @include col();
+      @include size(16);
+      @include size-sm(12);
+      @include shift-sm-left(2);
+      @include size-lg(9);
+      @include shift-lg-left(1);
+    }
+
+    &__element {
+      display: inline-block;
+      width: 150px;
+      height: 150px;
+      margin-left: -22px;
+      margin-right: -22px;
+
+      font-size: px-to-em(38);
+      line-height: 150px;
+      font-weight: 700;
+      text-align: center;
+      color: $white;
+
+      background-color: $color-success;
+      border-radius: 32%;
+
+      @include sm-block() {
+        width: 195px;
+        height: 195px;
+        margin-left: -32px;
+        margin-right: -32px;
+
+        font-size: px-to-em(42);
+        line-height: 200px;
+      }
+
+      &:last-child {
+        color: $color-danger;
+        background-color: rgba(230, 231, 231, 0.5);
+      }
+    }
+
+    &__heading {
+      font-size: 1.5em;
+      line-height: 1.5em;
+
+      @include sm-block() {
+        font-size: 1.7em;
+      }
+    }
+
+    &__text {
+      font-size: 1em;
+      line-height: 1.7em;
+      font-family: $font-family-secondary;
+
+      @include sm-block() {
+        font-size: 1.15em;
+        line-height: 2.2em;
+      }
+    }
+
+    &--01,
+    &--02, {
+
+      .slide-about__element {
+        width: 280px;
+        height: 250px;
+
+        line-height: 250px;
+      }
+    }
+  }
+
+  .owl-nav {
+    display: none;
+  }
+
+  .owl-dots {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .owl-dot {
+    display: inline-block;
+    width: 0;
+    margin-right: 10px;
+
+    border: 7px solid $gray-lightest;
+    border-radius: 50%;
+
+    &.active {
+      border-color: $gray-lighten;
+    }
+  }
 }

@@ -9,7 +9,7 @@ $gray:                        hsl(0, 0%, 50%);
 $gray-light:                  hsl(0, 0%, 60%);
 $gray-lighten:                hsl(0, 0%, 70%);
 $gray-lighter:                hsl(0, 0%, 80%);
-$gray-lightest:               hsl(0, 0%, 90%);
+$gray-lightest:               hsl(0, 0%, 96%);
 $white:                       hsl(0, 0%, 100%);
 
 $color-main:                  #5ec2e7;
@@ -46,6 +46,7 @@ $font-size--small:            0.75em;
 $line-height:                 1.375em;
 
 $font-family:                 Montserrat, -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
+$font-family-secondary:       'Open Sans', -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
 $font-family--serif:          'Georgia', 'Times New Roman', 'Times', serif;
 $font-family--monospace:      'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
 $font-family--headings:       $font-family;
