@@ -48,7 +48,9 @@
     "slogan": [],
     "contact": [],
     "block-title": [],
-    "map": []
+    "map": [],
+    "section-title": [],
+    "item-portfolio": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
