@@ -9,7 +9,7 @@
   margin-top: -15px;
   padding-top: px-to-em(100);
   padding-bottom: px-to-em(100);
-  background-color: #f4f4f4;
+  background-color: $gray-more-lightest;
 
   &__wrapper {
     @include wrapper();

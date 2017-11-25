@@ -54,25 +54,6 @@
   }
 
   &__btn {
-    position: absolute;
-    bottom: 50px;
-
-    display: inline-block;
-    margin-left: -27px;
-    padding: 5px;
-    width: 55px;
-    height: 55px;
-
-    font-size: 0;
-
-    border: 2px solid $white;
-    border-radius: 50%;
-
-    &:after {
-      content: '';
-      display: inline-block;
-      margin-top: 10px;
-      @include sprite($hero-icon-arrow-down);
-    }
+    
   }
 }

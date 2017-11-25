@@ -18,7 +18,8 @@
   // embed,
   // object,
   iframe,
-  video {
+  video,
+  &__content {
     position: absolute;
     top: 0;
     bottom: 0;

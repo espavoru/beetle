@@ -50,7 +50,9 @@
     "block-title": [],
     "map": [],
     "section-title": [],
-    "item-portfolio": []
+    "item-portfolio": [],
+    "item-blog": [],
+    "view-more": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
