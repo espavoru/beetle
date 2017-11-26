@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока skills, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока skills, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
@@ -6,4 +6,177 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  padding-top: 110px;
+  padding-bottom: 80px;
+
+  text-align: center;
+  background-color: $gray-more-lightest;
+
+  &__wrapper {
+    @include wrapper();
+    overflow: hidden;
+  }
+
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__text {
+    margin-bottom: 110px;
+
+    font-size: px-to-em(16);
+    line-height: 1.8em;
+    font-family: $font-family-secondary;
+  }
+
+  &__row {
+    @include row-flex();
+    justify-content: center;
+    max-width: 500px;
+    margin: auto;
+
+    @include lg-block() {
+      @include row-flex();
+      justify-content: space-between;
+      max-width: initial;
+    }
+  }
+
+  .progress-round {
+    $diameter:                  210px;
+    $gray:                      $gray-lightest;
+    $border:                    12px;
+
+    width: $diameter;
+    height: $diameter;
+    margin-bottom: 40px;
+
+    @include col();
+
+    &:before {
+      width: $diameter;
+      height: $diameter;
+      clip: rect(0, #{$diameter/2}, $diameter, 0);
+    }
+
+    &:after {
+      width: $diameter;
+      height: $diameter;
+      clip: rect(0, #{$diameter/2}, $diameter, 0);
+
+      background-color: $gray;
+    }
+
+    &__center {
+      top: $border;
+      left: $border;
+
+      width: #{$diameter - 2 * $border};
+      height: #{$diameter - 2 * $border};
+
+      background-color: $gray-more-lightest;
+    }
+
+
+    &:nth-child(1) {
+      $progress:                 360 * 0.85; // Угол
+      $accent:                    $color-main;
+
+      &::before {
+        @if $progress > 180 {
+          background-color: $accent;
+        }
+        @if $progress <= 180 {
+          background-color: $gray;
+        }
+        @if $progress <= 180 {
+          transform: rotate(#{180 + $progress}deg);
+        }
+        @if $progress > 180 {
+          transform: rotate(#{180 + $progress - 180}deg);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      $progress:                 360 * 0.85; // Угол
+      $accent:                    $color-success;
+
+      background-color: $accent;
+
+      &::before {
+        @if $progress > 180 {
+          background-color: $accent;
+        }
+        @if $progress <= 180 {
+          background-color: $gray;
+        }
+        @if $progress <= 180 {
+          transform: rotate(#{180 + $progress}deg);
+        }
+        @if $progress > 180 {
+          transform: rotate(#{180 + $progress - 180}deg);
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      $progress:                 360 * 0.70; // Угол
+      $accent:                    $color-success;
+
+      background-color: $accent;
+
+      &::before {
+        @if $progress > 180 {
+          background-color: $accent;
+        }
+        @if $progress <= 180 {
+          background-color: $gray;
+        }
+        @if $progress <= 180 {
+          transform: rotate(#{180 + $progress}deg);
+        }
+        @if $progress > 180 {
+          transform: rotate(#{180 + $progress - 180}deg);
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      $progress:                 360 * 0.70; // Угол
+      $accent:                    $color-main;
+
+      background-color: $accent;
+
+      &::before {
+        @if $progress > 180 {
+          background-color: $accent;
+        }
+        @if $progress <= 180 {
+          background-color: $gray;
+        }
+        @if $progress <= 180 {
+          transform: rotate(#{180 + $progress}deg);
+        }
+        @if $progress > 180 {
+          transform: rotate(#{180 + $progress - 180}deg);
+        }
+      }
+    }
+  }
+
+  &__value {
+    margin-top: 45%;
+    margin-bottom: 20px;
+
+    font-size: px-to-em(57);
+    font-weight: 700;
+    color: $gray-dark;
+  }
+
+  &__caption {
+    font-size: px-to-em(18);
+    color: $gray-light;
+  }
 }

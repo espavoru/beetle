@@ -51,6 +51,7 @@
     }
 
     &--01 {
+
       #{$block-name}:nth-child(1) {
         background-image: url(../img/img-portfolio-n01.jpg);
       }
@@ -61,6 +62,7 @@
     }
 
     &--02 {
+      
       #{$block-name}:nth-child(1) {
         background-image: url(../img/img-portfolio-n04.jpg);
       }

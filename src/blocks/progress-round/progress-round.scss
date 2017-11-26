@@ -1,0 +1,67 @@
+// В этом файле должны быть стили для БЭМ-блока progress-round, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.progress-round {
+
+  $block-name:                &; // #{$block-name}__element
+  $diameter:                  200px !default;
+  $accent:                    $color-main !default;
+  $gray:                      $gray-lightest !default;
+  $progress:                  360 * 0.85 !default; // Угол
+  $border:                    10px !default;
+
+  position: relative;
+  width: $diameter;
+  height: $diameter;
+  border-radius: 50%;
+  background-color: $accent;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    content: '';
+    @if $progress > 180 {
+      background-color: $accent;
+    }
+    @if $progress <= 180 {
+      background-color: $gray;
+    }
+    width: $diameter;
+    height: $diameter;
+    border-radius: 50%;
+    clip: rect(0, #{$diameter/2}, $diameter, 0);
+    transform-origin: 50% 50%;
+    @if $progress <= 180 {
+      transform: rotate(#{180 + $progress}deg);
+    }
+    @if $progress > 180 {
+      transform: rotate(#{180 + $progress - 180}deg);
+    }
+    z-index: 1;
+  }
+
+  &::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    background-color: $gray;
+    width: $diameter;
+    height: $diameter;
+    border-radius: 50%;
+    clip: rect(0, #{$diameter/2}, $diameter, 0);
+    transform-origin: 50% 50%;
+    transform: rotate(0deg);
+  }
+
+  &__center {
+    position: absolute;
+    top: $border;
+    left: $border;
+    width: #{$diameter - 2 * $border};
+    height: #{$diameter - 2 * $border};
+    background-color: $white;
+    border-radius: 50%;
+    z-index: 2;
+  }
+}
