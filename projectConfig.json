@@ -77,7 +77,7 @@
     "./src/js/global-script.js"
   ],
   "addImages": [
-    "./src/img/**/*.{jpg,jpeg,gif,png,svg,ico}"
+    "./src/img/*.{jpg,jpeg,gif,png,svg,ico}"
   ],
   "copiedCss": [],
   "copiedJs": [],
