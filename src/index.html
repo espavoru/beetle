@@ -156,27 +156,27 @@
             <h2 class="blog__title section-title">Blog</h2>
             <div class="blog__wrapper embed-responsive">
 
-                <div class="blog__grid embed-responsive__content">
-                  <div class="blog__grid-item embed-responsive">
-                    <div class="item-blog--22 item-blog embed-responsive__content">
+              <div class="blog__grid embed-responsive__content">
+                <div class="blog__grid-item embed-responsive">
+                  <div class="item-blog--22 item-blog embed-responsive__content">
+                    <div class="item-blog__category">Category</div>
+                    <div class="item-blog__title">Nemo enim ipsam</div>
+                  </div>
+                </div>
+                <div class="blog__grid-item embed-responsive">
+                  <div class="item-blog item-blog--12 embed-responsive__content">
+                    <div class="item-blog__meta">
                       <div class="item-blog__category">Category</div>
-                      <div class="item-blog__title">Nemo enim ipsam</div>
+                      <div class="item-blog__title">Pellentesque nunc</div>
+                      <div class="item-blog__excerpt">Qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum </div>
                     </div>
                   </div>
-                  <div class="blog__grid-item embed-responsive">
-                    <div class="item-blog item-blog--12 embed-responsive__content">
-                      <div class="item-blog__meta">
-                        <div class="item-blog__category">Category</div>
-                        <div class="item-blog__title">Pellentesque nunc</div>
-                        <div class="item-blog__excerpt">Qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="blog__grid-item embed-responsive">
-                    <div class="item-blog item-blog--03 embed-responsive"></div>
-                    <div class="item-blog item-blog--04 embed-responsive"></div>
-                  </div>
-                </div><!-- /embed-responsive__content -->
+                </div>
+                <div class="blog__grid-item embed-responsive">
+                  <div class="item-blog item-blog--03 embed-responsive"></div>
+                  <div class="item-blog item-blog--04 embed-responsive"></div>
+                </div>
+              </div><!-- /embed-responsive__content -->
 
             </div>
             <a href="#skills" class="blog__more-btn view-more__btn">View more</a>
@@ -314,25 +314,23 @@
 
                     <label class="form-contact__budget field-select">
                       <div class="field-select__select-wrap">
-                        <select class="field-select__select">
-                          <optgroup label="Budget">
-                            <option><50$</option>
-                            <option>50$-200$</option>
-                            <option>>200$</option>
-                          </optgroup>
-                          <option>>500$</option>
+                        <select class="field-select__select" name="Budget">
+                          <option value="" disabled selected hidden>Budget</option>
+                          <option value="50$"><50$</option>
+                          <option value="50$ - 200$">50$-200$</option>
+                          <option value=">200$">>200$</option>
+                          <option value=">500$">>500$</option>
                         </select>
                       </div>
                     </label>
 
                     <label class="form-contact__timeline field-select">
                       <div class="field-select__select-wrap">
-                        <select class="field-select__select">
-                          <optgroup label="Timeline">
+                        <select class="field-select__select" name="Timeline">
+                          <option value="" disabled selected hidden>Timeline</option>
                             <option>on yesterday</option>
                             <option>1 day</option>
                             <option>>3-4 days</option>
-                          </optgroup>
                           <option>>no matter</option>
                         </select>
                       </div>
@@ -363,6 +361,7 @@
                   </div>
 
                   <div class="contact__social">
+                    <h3 class="contact__social-title block-title">I am social</h3>
                     <ul class="social-list">
                       <li class="social-item">
                         <a href="#" class="social-btn social-btn--fb btn">Facebook</a>

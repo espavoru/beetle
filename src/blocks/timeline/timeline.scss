@@ -13,7 +13,6 @@
 
     padding-top: 155px;
     padding-bottom: 135px;
-
   }
 
   &__wrapper {
@@ -71,7 +70,6 @@
       border-color: darken($color-main, 15%);
       background-color: $color-main;
     }
-
   }
 
   .block-timeline {
@@ -95,7 +93,6 @@
 
 
       @include md(left, 0);
-
     }
 
     &__item {
@@ -201,9 +198,7 @@
 
       background-color: $white;
 
-
       @include md(left, -15px);
-
     }
   }
 }

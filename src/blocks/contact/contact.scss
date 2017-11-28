@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока contact, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока contact, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
@@ -6,4 +6,317 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  background-color: $gray-more-lightest;
+
+  @include sm-block() {
+    padding-top: 100px;
+    padding-bottom: 130px;
+  }
+
+  &__wrapper {
+    @include wrapper();
+  }
+
+  &__title {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+
+    margin-bottom: 45px;
+
+    @include sm(margin-bottom, 105px);
+  }
+
+  &__row {
+
+    @include sm-block() {
+      @include row-flex();
+      justify-content: center;
+    }
+
+    @include lg(justify-content, space-between);
+  }
+
+  .form-contact {
+    font-size: 1em;
+    font-weight: 400;
+
+    @include sm-block() {
+      @include col();
+      @include size-sm(16);
+    }
+
+    @include size-lg(11);
+
+    .contact__row {
+      justify-content: flex-end;
+    }
+
+    input {
+      color: $gray-darker;
+    }
+
+    &__name,
+    &__email {
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: 50%;
+
+        display: inline-block;
+        @include sprite($contact-icon-user);
+        transform: translate(0, -50%);
+      }
+
+      @include sm-block() {
+        @include col();
+        @include size-sm(8);
+      }
+    }
+
+    &__email {
+
+      &:before {
+        @include sprite($contact-icon-envelope);
+      }
+    }
+
+    &__budget,
+    &__timeline {
+
+      @include sm-block() {
+        @include col();
+        @include size-sm(8);
+      }
+    }
+
+    &__message {
+
+      @include sm-block() {
+        @include col();
+        @include size-sm(16);
+      }
+
+      @include lg(margin-bottom, 32px);
+    }
+
+    &__submit {
+      margin-bottom: 0;
+
+      @include sm-block() {
+        @include col();
+      }
+    }
+
+    &__btn {
+      min-width: 140px;
+      margin-bottom: 0;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      font-size: px-to-em(16);
+      line-height: 1.8em;
+      text-align: center;
+      text-transform: uppercase;
+      color: $white;
+
+      background-color: $color-danger;
+      border-radius: 5px;
+    }
+  }
+
+  .field-text__input,
+  .field-select__select {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 50px;
+    padding-right: 18px;
+
+    line-height: px-to-em(24);
+    color: $gray-light;
+
+    border: 2px solid $gray-lightest;
+    border-radius: 7px;
+
+    &:hover {
+      border-color: $gray-lighter;
+    }
+
+    &:focus {
+      color: $gray-darker;
+
+    }
+
+    &::placeholder {
+      color: $gray-light;
+    }
+  }
+
+  textarea.field-text__input,
+  .field-select__select {
+    padding-left: 18px;
+  }
+
+  label {
+    margin-bottom: 18px;
+  }
+
+  textarea {
+    min-height: 140px;
+  }
+
+  option {
+    color: $gray-darker;
+  }
+
+  &__aside {
+    @include size-sm(14);
+    @include size-lg(4);
+
+    @include sm-block() {
+      display: flex;
+      justify-content: space-around;
+
+      padding-top: 50px;
+    }
+
+    @include lg-block() {
+      display: block;
+      padding-top: 0;
+    }
+  }
+
+  .block-title {
+    margin: 0;
+    margin-bottom: 13px;
+
+    font-size: px-to-em(13);
+    line-height: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $gray-lighter;
+  }
+
+  .location-contact {
+
+    &__address {
+      margin-bottom: 40px;
+
+      font-size: px-to-em(15);
+      line-height: 1.5em;
+      font-family: $font-family-secondary;
+      color: $gray-darker;
+    }
+  }
+
+  .social-list {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+  }
+
+  .social-btn {
+    position: relative;
+
+    margin-bottom: 10px;
+    padding-left: 60px;
+
+    font-size: px-to-em(16);
+    line-height: 1.5em;
+    font-weight: 400;
+    color: $gray-darker;
+    letter-spacing: 0.01em;
+
+    background-color: initial;
+    border: none;
+
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active, &:focus {
+      box-shadow: initial;
+    }
+
+    &--fb {
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 50%;
+
+        @include sprite($contact-icon-fb);
+
+        transform: translate(0, -50%);
+      }
+    }
+
+    &--tw {
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 50%;
+
+        @include sprite($contact-icon-tw);
+
+        transform: translate(0, -50%);
+      }
+    }
+
+    &--in {
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 50%;
+
+        @include sprite($contact-icon-in);
+
+        transform: translate(0, -50%);
+      }
+    }
+
+    &--gpl {
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 50%;
+
+        @include sprite($contact-icon-gpl);
+
+        transform: translate(0, -50%);
+      }
+    }
+
+    &--rss {
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 50%;
+
+        @include sprite($contact-icon-rss);
+
+        transform: translate(0, -50%);
+      }
+    }
+  }
 }
