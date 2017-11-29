@@ -2,6 +2,7 @@
   "blocks": {
     "animate.css": [],
     "smart-grid": [],
+    "sprite-png": [],
     "page": [],
     "is-mobile": [],
     "typo": [],
@@ -29,7 +30,6 @@
     ],
     "field-actions": [],
     "form": [],
-    "sprite-png": [],
     "menu": [],
     "label": [],
     "owl-carousel": [],

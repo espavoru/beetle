@@ -5,4 +5,152 @@
 .page-footer {
 
   $block-name:                &; // #{$block-name}__element
+  $color-menu-items:          #545766;
+
+  padding-top: 55px;
+  padding-bottom: 55px;
+
+  text-align: center;
+
+  background-color: #363842;
+
+  @include sm-block() {
+    text-align: left;
+  }
+
+  &__wrapper {
+    @include wrapper();
+  }
+
+  &__row {
+
+    @include sm-block() {
+      @include row-flex();
+      justify-content: center;
+    }
+  }
+
+  &__menu {
+    margin-bottom: 60px;
+
+    @include sm-block() {
+      @include col();
+      @include size(7);
+    }
+
+    @include md-block() {
+      @include size(4);
+      margin-bottom: 0;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    font-size: px-to-em(16);
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  .menu {
+    margin: 0;
+    padding: 0;
+
+    &__link {
+      font-size: px-to-em(14);
+      line-height: 38px;
+      text-transform: uppercase;
+      color: $color-menu-items;
+
+      @include sm(padding, 0);
+
+      &:hover {
+        color: lighten($color-menu-items, 20%)
+      }
+    }
+  }
+
+  &__contact {
+    margin-bottom: 60px;
+
+    @include sm-block() {
+      @include col();
+      @include size(7);
+    }
+
+    @include md-block() {
+      @include size(4);
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    font-size: px-to-em(14);
+    line-height: 28px;
+    text-decoration: none;
+    color: $color-menu-items;
+
+    &:hover {
+      color: lighten($color-menu-items, 20%)
+    }
+  }
+
+  &__newsletter {
+    margin-bottom: 60px;
+
+    @include sm-block() {
+      @include col();
+      @include size(7);
+    }
+
+    @include md-block() {
+      @include size(4);
+      margin-bottom: 0;
+    }
+  }
+
+  &__follow-us {
+
+    @include sm-block() {
+      @include col();
+      @include size(7);
+    }
+
+    @include md-block() {
+      @include size(4);
+      margin-bottom: 0;
+    }
+  }
+
+  .social-btn {
+    margin-right: 20px;
+
+    font-size: 0;
+
+    background-color: initial;
+    border: none;
+    opacity: 0.3;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      opacity: 1;
+      background-color: initial;
+    }
+
+    &:active, &:focus {
+      box-shadow: initial;
+    }
+
+    &--tw {
+      @include sprite($contact-icon-tw);
+    }
+
+    &--fb {
+      @include sprite($contact-icon-fb);
+    }
+  }
 }
