@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Beetle</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+    <script>
+      // Маркер работающего javascript
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      document.addEventListener('DOMContentLoaded', function(){
+        if (window.isMobile !== undefined) {
+          // console.log(isMobile);
+          if(isMobile.any) {
+            var rootClasses = ' is-mobile';
+            for (key in isMobile) {
+              if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+              if(typeof isMobile[key] === 'object' && key !== 'other') {
+                for (type in isMobile[key]) {
+                  if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+                }
+              }
+            }
+            document.documentElement.className += rootClasses;
+          }
+        }
+        else {
+          console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+        }
+      });
+
+    </script>
+
+    <link rel="icon" href="img/favicon.ico?v=02" type="image/x-icon">
+
+  </head>
+
+  <body>
+
+    <div class="page__inner">
+
+      <div class="page__content">
+
+        <header class="page-header page-header__default animated" role="banner">
+          <div class="page-header__wrapper">
+            <nav id="main-nav" class="main-nav smooth-scroll" role="navigation">
+              <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+              <a class="main-nav__logo" href="#">Beetle</a>
+              <ul class="main-nav__list">
+                <li class="main-nav__item  main-nav__item--active">
+                  <a href="#hero" class="main-nav__link">
+                    Home
+                  </a>
+                  <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-2">
+                    <ul class="main-nav__list  main-nav__list--lvl-2">
+                      <li class="main-nav__item  main-nav__item--lvl-2">
+                        <a href="#" class="main-nav__link  main-nav__link--lvl-2">
+                          Standart
+                        </a>
+                      </li>
+                      <li class="main-nav__item  main-nav__item--lvl-2">
+                        <a href="#" class="main-nav__link  main-nav__link--lvl-2">
+                          Landing page 1
+                        </a>
+                      </li>
+                      <li class="main-nav__item  main-nav__item--lvl-2">
+                        <a href="#" class="main-nav__link  main-nav__link--lvl-2">
+                          Landing page 2
+                        </a>
+                      </li>
+                      <li class="main-nav__item  main-nav__item--lvl-2">
+                        <a href="#" class="main-nav__link  main-nav__link--lvl-2">
+                          Landing page 3
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#portfolio" class="main-nav__link">
+                    Portfolio
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#blog" class="main-nav__link">
+                    Blog
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#skills" class="main-nav__link">
+                    Resume
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#contact" class="main-nav__link">
+                    Contact
+                  </a>
+                </li>
+              </ul><!-- /main-nav__list -->
+            </nav><!-- /main-nav -->
+          </div>
+        </header>
+
+
+        <main role="main">
+
+          <div id="hero" class="hero smooth-scroll">
+            <div class="hero__wrapper">
+              <h1 class="hero__title">Designer & Maker</h1>
+              <h2 class="hero__subtitle">Building new products at Spotify NYC. Mail App</h2>
+            </div>
+            <a href="#about" class="hero__btn view-more__btn">View more</a>
+          </div><!-- /hero -->
+
+          <div class="about" id="about">
+            <div class="about__wrapper">
+              <div class="about__slider owl-carousel" id="owl-carousel-about">
+                <div class="slide-about--00 slide-about">
+                  <div class="slide-about__row">
+                    <div class="slide-about__figures">
+                      <div class="slide-about__element">UI</div>
+                      <div class="slide-about__element">UX</div>
+                    </div><!-- /slide-about__figures -->
+                    <div class="slide-about__content">
+                      <h3 class="slide-about__heading">I create simple interfaces for humans and enjoy pixel-perfection.</h3>
+                      <p class="slide-about__text">I’m an experienced and passionate user interface designer with interaction design background.</p>
+                    </div><!-- /slide-about__content -->
+                  </div>
+                </div>
+                <div class="slide-about--01 slide-about">
+                  <div class="slide-about__row">
+                    <div class="slide-about__figures">
+                      <div class="slide-about__element">Logo design</div>
+                    </div>
+                    <div class="slide-about__content">
+                      <h3 class="slide-about__heading">Mauris eget vulputate felis</h3>
+                      <p class="slide-about__text">Donec viverra interdum turpis, a auctor nunc aliquam ac. Phasellus iaculis ex in justo eleifend volutpat. Vivamus cursus </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-about--02 slide-about">
+                  <div class="slide-about__row">
+                    <div class="slide-about__figures">
+                      <div class="slide-about__element">SEO</div>
+                    </div>
+                    <div class="slide-about__content">
+                      <h3 class="slide-about__heading">Voluptas sit aspernatur aut</h3>
+                      <p class="slide-about__text">Etiam maximus leo metus, non vestibulum mi aliquet ultricies. Sed turpis turpis, imperdiet at blandit.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- /about -->
+
+          <div class="portfolio smooth-scroll" id="portfolio">
+            <div class="portfolio__wrapper">
+              <h2 class="portfolio__title section-title">Portfolio</h2>
+              <div class="portfolio__row">
+                <div class="item-portfolio__inner item-portfolio__inner--01">
+                  <div class="portfolio__item item-portfolio">
+                    <!--<img class="item-portfolio__img" src="img/img-portfolio-n01.jpg" alt="Case">-->
+                    <div class="item-portfolio__content">
+                      <div class="item-portfolio__icon"></div>
+                      <div class="item-portfolio__title">Praesent auctort</div>
+                      <div class="item-portfolio__text">Aenean consectetur urna ac leo ullamcorper pharetra. Nulla facilisi.</div>
+                    </div>
+                  </div><!-- /item-portfolio -->
+                  <div class="portfolio__item item-portfolio">
+                    <!--<img src="img/img-portfolio-n02.jpg" alt="Case" class="item-portfolio__img">-->
+                    <div class="item-portfolio__content">
+                      <div class="item-portfolio__icon"></div>
+                      <div class="item-portfolio__title">Sed ut persp.</div>
+                      <div class="item-portfolio__text">Etiam maximus leo metus, non vestibulum mi aliquet ultricies.</div>
+                    </div>
+                  </div>
+                </div><!-- /item-portfolio__inner -->
+                <div class="portfolio__item item-portfolio item-portfolio--big">
+                  <!--<img src="img/img-portfolio-n03.jpg" alt="Case" class="item-portfolio__img">-->
+                  <div class="item-portfolio__content">
+                    <div class="item-portfolio__icon"></div>
+                    <div class="item-portfolio__title">Veritatis et</div>
+                    <div class="item-portfolio__text">Phasellus risus metus, vulputate scelerisque arcu quis</div>
+                  </div>
+                </div>
+                <div class="item-portfolio__inner item-portfolio__inner--02">
+                  <div class="portfolio__item item-portfolio">
+                    <!--<img src="img/img-portfolio-n04.jpg" alt="Case" class="item-portfolio__img">-->
+                    <div class="item-portfolio__content">
+                      <div class="item-portfolio__icon"></div>
+                      <div class="item-portfolio__title">Nemo enim ipsam</div>
+                      <div class="item-portfolio__text">Aenean consectetur urna ac leo ullamcorper pharetra. Nulla facilisi.</div>
+                    </div>
+                  </div>
+                  <div class="portfolio__item item-portfolio">
+                    <!--<img src="img/img-portfolio-n05.jpg" alt="Case" class="item-portfolio__img">-->
+                    <div class="item-portfolio__content">
+                      <div class="item-portfolio__icon"></div>
+                      <div class="item-portfolio__title">Nemo enim ipsam</div>
+                      <div class="item-portfolio__text">Proin aliquet ullamcorper ipsum, vel tincidunt nibh. Nunc finibus</div>
+                    </div>
+                  </div>
+                </div><!-- /item-portfolio__inner -->
+                <div class="portfolio__item item-portfolio">
+                  <!--<img src="img/img-portfolio-n06.jpg" alt="Case" class="item-portfolio__img">-->
+                  <div class="item-portfolio__content">
+                    <div class="item-portfolio__icon"></div>
+                    <div class="item-portfolio__title">Praesent auctor</div>
+                    <div class="item-portfolio__text">Donec viverra interdum turpis, a auctor nunc aliquam ac. Phasellus iaculis</div>
+                  </div>
+                </div>
+                <div class="portfolio__item item-portfolio">
+                  <!--<img src="img/img-portfolio-n07.jpg" alt="Case" class="item-portfolio__img">-->
+                  <div class="item-portfolio__content">
+                    <div class="item-portfolio__icon"></div>
+                    <div class="item-portfolio__title">Sed ut perspic</div>
+                    <div class="item-portfolio__text">Etiam maximus leo metus, non vestibulum mi aliquet ultricies. Sed turpis</div>
+                  </div>
+                </div>
+                <div class="portfolio__item item-portfolio">
+                  <!--<img src="img/img-portfolio-n08.jpg" alt="Case" class="item-portfolio__img">-->
+                  <div class="item-portfolio__content">
+                    <div class="item-portfolio__icon"></div>
+                    <div class="item-portfolio__title">Veritatis et</div>
+                    <div class="item-portfolio__text">Phasellus risus metus, vulputate scelerisque arcu quis, faucibus</div>
+                  </div>
+                </div>
+                <div class="portfolio__item item-portfolio">
+                  <!--<img src="img/img-portfolio-n09.jpg" alt="Case" class="item-portfolio__img">-->
+                  <div class="item-portfolio__content">
+                    <div class="item-portfolio__icon"></div>
+                    <div class="item-portfolio__title">Nemo enim ipsam</div>
+                    <div class="item-portfolio__text">Aenean consectetur urna ac leo ullamcorper pharetra. Nulla facilisi.</div>
+                  </div>
+                </div>
+              </div><!-- /portfolio__row -->
+              <a href="#" class="btn portfolio__btn">Browse portfolio</a>
+            </div>
+          </div><!-- /portfolio -->
+
+          <div class="blog smooth-scroll" id="blog">
+            <h2 class="blog__title section-title">Blog</h2>
+            <div class="blog__wrapper embed-responsive">
+
+              <div class="blog__grid embed-responsive__content">
+                <div class="blog__grid-item embed-responsive">
+                  <div class="item-blog--22 item-blog embed-responsive__content">
+                    <div class="item-blog__category">Category</div>
+                    <div class="item-blog__title">Nemo enim ipsam</div>
+                  </div>
+                </div>
+                <div class="blog__grid-item embed-responsive">
+                  <div class="item-blog item-blog--12 embed-responsive__content">
+                    <div class="item-blog__meta">
+                      <div class="item-blog__category">Category</div>
+                      <div class="item-blog__title">Pellentesque nunc</div>
+                      <div class="item-blog__excerpt">Qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="blog__grid-item embed-responsive">
+                  <div class="item-blog item-blog--03 embed-responsive"></div>
+                  <div class="item-blog item-blog--04 embed-responsive"></div>
+                </div>
+              </div><!-- /embed-responsive__content -->
+
+            </div>
+            <a href="#skills" class="blog__more-btn view-more__btn">View more</a>
+          </div><!-- /blog -->
+
+          <div class="skills" id="skills">
+            <div class="skills__wrapper">
+              <h2 class="skills__title section-title">Skills</h2>
+              <p class="skills__text">I’m an experienced and passionate user interface designer with interaction design background. My goal is to make the world wide web a better place by designing beautiful user experiences, one site at a time.</p>
+              <div class="skills__row">
+                <div class="progress-round">
+                  <div class="progress-round__center">
+                    <div class="skills__value">85%</div>
+                    <div class="skills__caption">User Interface</div>
+                  </div>
+                </div>
+                <div class="progress-round">
+                  <div class="progress-round__center">
+                    <div class="skills__value">85%</div>
+                    <div class="skills__caption">Front-end</div>
+                  </div>
+                </div>
+                <div class="progress-round">
+                  <div class="progress-round__center">
+                    <div class="skills__value">70%</div>
+                    <div class="skills__caption">User Experience</div>
+                  </div>
+                </div>
+                <div class="progress-round">
+                  <div class="progress-round__center">
+                    <div class="skills__value">70%</div>
+                    <div class="skills__caption">Icon design</div>
+                  </div>
+                </div>
+              </div><!-- /skills__row -->
+            </div><!-- /skills__wrapper -->
+          </div><!-- /skills -->
+
+          <div class="timeline"><!-- https://ruseller.com/lessons/les2594/demo/index.html -->
+            <div class="timeline__wrapper">
+              <div class="timeline__row">
+                <div class="timeline__content">
+                  <h2 class="timeline__title">Work experience</h2>
+                  <p class="timeline__text">Specialties : User experience design, user interface design, brand identity, typography, print and packaging design, web standards, grid based layout.</p>
+                  <a href="#" class="timeline__btn btn">View on Linkedin</a>
+                </div><!-- /timeline__content -->
+                <div class="timeline__block block-timeline">
+                  <div class="block-timeline__item">
+                    <div class="block-timeline__icon"></div>
+                    <div class="block-timeline__body">
+                      <h3 class="block-timeline__company">Facebook</h3>
+                      <h4 class="block-timeline__position">UI/UX Designer</h4>
+                      <p class="block-timeline__period">
+                        October 2017 Menlo Park, CA, United States of America
+                      </p>
+                    </div><!-- /block-timeline__body -->
+                    <div class="block-timeline__year">2017</div>
+                  </div><!-- /block-timeline__item -->
+
+                  <div class="block-timeline__item">
+                    <div class="block-timeline__icon"></div>
+                    <div class="block-timeline__body">
+                      <h3 class="block-timeline__company">Amazon</h3>
+                      <h4 class="block-timeline__position">UI/UX Designer</h4>
+                      <p class="block-timeline__period">
+                        August 2017 – October 2017 (2 months)Menlo Park, CA, United States of America
+                      </p>
+                    </div><!-- /block-timeline__body -->
+                  </div><!-- /block-timeline__item -->
+
+                  <div class="block-timeline__item">
+                    <div class="block-timeline__icon"></div>
+                    <div class="block-timeline__body">
+                      <h3 class="block-timeline__company">Apple</h3>
+                      <h4 class="block-timeline__position">UI/UX Designer</h4>
+                      <p class="block-timeline__period">
+                        December 2016 – August 2017 (3 months)Menlo Park, CA, United States of America
+                      </p>
+                    </div><!-- /block-timeline__body -->
+                    <div class="block-timeline__year">2016</div>
+                  </div><!-- /block-timeline__item -->
+
+                  <div class="block-timeline__item">
+                    <div class="block-timeline__icon"></div>
+                    <div class="block-timeline__body">
+                      <h3 class="block-timeline__company">IBM</h3>
+                      <h4 class="block-timeline__position">UI/UX Designer</h4>
+                      <p class="block-timeline__period">
+                        October 2014 – November 2016 (2 months)Menlo Park, CA, United States of America
+                      </p>
+                    </div><!-- /block-timeline__body -->
+                    <div class="block-timeline__year">2014</div>
+                  </div><!-- /block-timeline__item -->
+                </div>
+              </div>
+            </div>
+          </div><!-- /timeline -->
+
+          <div class="slogan" id="slogan">
+            <div class="slogan__wrapper">
+              <div class="slogan__slider owl-carousel" id="owl-carousel-slogan">
+                <div class="slogan__slide">
+                  <blockquote class="slogan__quote">"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."</blockquote>
+                  <cite class="slogan__cite">- Franc Rapacciolo -</cite>
+                </div><!-- /slogan__slide -->
+                <div class="slogan__slide">
+                  <blockquote class="slogan__quote">"Auia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi."</blockquote>
+                  <cite class="slogan__cite">- Mark Stone -</cite>
+                </div><!-- /slogan__slide -->
+                <div class="slogan__slide">
+                  <blockquote class="slogan__quote">"Sed erat nibh, imperdiet in ornare et, feugiat nec diam. Morbi imperdiet."</blockquote>
+                  <cite class="slogan__cite">- Nick Brown -</cite>
+                </div><!-- /slogan__slide -->
+              </div>
+            </div>
+          </div><!-- /slogan -->
+
+          <div class="contact" id="contact">
+            <div class="contact__wrapper">
+              <h2 class="contact__title section-title">Contact</h2>
+              <div class="contact__row">
+                <form action="#" class="contact__form form-contact form">
+                  <div class="contact__row">
+                    <label class="form-contact__name field-text"><!-- https://bootsnipp.com/snippets/featured/support-glyph-and-fa-icon-inside-input -->
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="Full name">
+                      </span>
+                    </label>
+
+                    <label class="form-contact__email field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="email" placeholder="Enter address">
+                      </span>
+                    </label>
+
+                    <label class="form-contact__budget field-select">
+                      <div class="field-select__select-wrap">
+                        <select class="field-select__select" name="Budget">
+                          <option value="" disabled selected hidden>Budget</option>
+                          <option value="50$"><50$</option>
+                          <option value="50$ - 200$">50$-200$</option>
+                          <option value=">200$">>200$</option>
+                          <option value=">500$">>500$</option>
+                        </select>
+                      </div>
+                    </label>
+
+                    <label class="form-contact__timeline field-select">
+                      <div class="field-select__select-wrap">
+                        <select class="field-select__select" name="Timeline">
+                          <option value="" disabled selected hidden>Timeline</option>
+                            <option>on yesterday</option>
+                            <option>1 day</option>
+                            <option>>3-4 days</option>
+                          <option>>no matter</option>
+                        </select>
+                      </div>
+                    </label>
+
+                    <label class="form-contact__message field-text">
+                      <span class="field-text__input-wrap">
+                        <textarea class="field-text__input" placeholder="Tell me about your project briefly"></textarea>
+                      </span>
+                    </label>
+
+                    <div class="form-contact__submit field-actions">
+                      <button class="form-contact__btn btn">Send</button>
+                    </div>
+                  </div><!-- /contact__row -->
+                </form><!-- /contact__form -->
+
+                <div class="contact__aside">
+                  <div class="contact__location location-contact">
+                    <h3 class="location-contact__title block-title">Location</h3>
+                    <p class="location-contact__address">
+                      13, 2 Elizabeth ST,
+                      <br>
+                      Melbourne, Victoria 3000,
+                      <br>
+                      Australia
+                    </p>
+                  </div>
+
+                  <div class="contact__social">
+                    <h3 class="contact__social-title block-title">I am social</h3>
+                    <ul class="social-list">
+                      <li class="social-item">
+                        <a href="#" class="social-btn social-btn--fb btn">Facebook</a>
+                      </li>
+                      <li class="social-item">
+                        <a href="#" class="social-btn social-btn--tw btn">Twitter</a>
+                      </li>
+                      <li class="social-item">
+                        <a href="#" class="social-btn social-btn--in btn">Linkedin</a>
+                      </li>
+                      <li class="social-item">
+                        <a href="#" class="social-btn social-btn--gpl btn">Google +</a>
+                      </li>
+                      <li class="social-item">
+                        <a href="#" class="social-btn social-btn--rss btn">RSS</a>
+                      </li>
+                    </ul><!-- /social-list -->
+                  </div><!-- /contact__social -->
+                </div><!-- /contact__aside -->
+              </div><!-- /contact__row -->
+            </div>
+          </div><!-- /contact -->
+
+          <div class="map" id="map">
+            <div class="map__wrapper">
+              <svg class="map__icon" width="55" height="55">
+              <circle r="50%" cx="50%" cy="50%" fill="#fff" fill-opacity="0.6"/>
+              <circle r="14%" cx="50%" cy="50%" fill="#fd685b"/>
+              </svg>
+              <div class="map__content">
+                I’m based in
+                <span class="map__lead">Milan, Italy</span>
+              </div>
+              
+            </div>
+          </div><!-- /map -->
+
+        </main>
+
+      </div><!-- /page__content -->
+    </div><!-- /page__inner -->
+
+    <div class="page__footer-wrapper">
+
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-footer__wrapper">
+          <div class="page-footer__row">
+            <div class="page-footer__menu">
+              <h3 class="page-footer__subtitle">Menu</h3>
+              <ul class="menu">
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Home</a>
+                </li>
+                <li class="menu__item ">
+                  <a class="menu__link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#blog">Blog</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#resume">Resume</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#contact">Contact</a>
+                </li>
+              </ul><!-- /menu -->
+            </div><!-- /page-footer__menu -->
+            <div class="page-footer__contact">
+              <h3 class="page-footer__subtitle">Contact</h3>
+              <a href="#" class="page-footer__link">Flat 3D Mockup Kit</a>
+            </div>
+            <div class="page-footer__newsletter">
+              <h3 class="page-footer__subtitle">Newsletter</h3>
+            </div>
+            <div class="page-footer__follow-us">
+              <h3 class="page-footer__subtitle">Follow Us</h3>
+                  <a href="#" class="social-btn social-btn--tw btn">Twitter</a>
+                  <a href="#" class="social-btn social-btn--fb btn">Facebook</a>
+            </div>
+          </div><!-- /page-footer__row -->
+        </div><!-- /page-footer__wrapper -->
+      </footer>
+
+    </div><!-- /page__footer-wrapper -->
+    <script src="js/script.min.js"></script>
+
+  </body>
+</html>

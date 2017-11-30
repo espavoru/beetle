@@ -1,5 +1,0 @@
-# перечисление игнорируемых stylelint-ом файлов
-src/blocks/sprite-png/sprite-png.scss
-src/blocks/smart-grid/smart-grid.scss
-src/blocks/typo/typo.scss
-src/blocks/animate.css/*.*
